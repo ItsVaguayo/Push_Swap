@@ -32,7 +32,7 @@ The program prints to **stdout** the sequence of operations required to sort sta
 ## 🧩 Allowed operations
 
 `sa` `sb` `ss` `pa` `pb` `ra` `rb` `rr` `rra` `rrb` `rrr`
-![Workflow](assets/push_swap_visualizer.gif)
+![Workflow]([assets/push_swap_visualizer.gif](https://github.com/Edugs94/Push_Swap/raw/main/assets/push_swap_visualizer.gif))
 
 ---
 
