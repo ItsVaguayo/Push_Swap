@@ -1,96 +1,59 @@
-*This project has been created as part of the 42 curriculum by vaguayo-.*
+# push_swap
+![42 School](https://img.shields.io/badge/-School-000000?style=flat-square&logo=42&logoColor=white) <br>
+A 42 school project focused on sorting a list of integers in **ascending order** using **two stacks**:
+
+- **a** → main stack  
+- **b** → auxiliary stack  
+
+You can only use a fixed set of operations, and the objective is to produce the **smallest possible number of moves**.  
+The program prints to **stdout** the sequence of operations required to sort stack **a**.
 
 ---
 
-## Description
+## ✨ Features
 
-**push_swap** is an algorithmic project from the 42 curriculum whose goal is to sort a stack of integers using a very limited set of operations and the smallest possible number of moves.
+- **Flexible input**
+  - `./push_swap 3 2 1`
+  - `./push_swap "3 2 1"`
 
-The program receives a list of integers as arguments, stores them in stack **A**, and must sort them in ascending order using an auxiliary stack **B**. Only specific operations such as swaps, pushes, and rotations are allowed.
+- **Strong validation**
+  - Non-numeric values
+  - Duplicates
+  - `int` overflow / out-of-range numbers
 
-To achieve an efficient solution, the project uses different strategies depending on the number of elements, including hardcoded small sorts and a binary-based radix sort for larger inputs.
+- **Efficient sorting approaches**
+  - Optimized logic for **small stacks (≤ 5)**
+  - **Binary LSD radix sort** for bigger inputs (using **indexed values**)
 
----
-
-## Instructions
-
-### Compilation
-
-To compile the project, run:
-
-```bash
-make
-```
-
-This will generate the executable:
-
-```bash
-./push_swap
-```
-
-### Usage
-
-Run the program with a list of integers:
-
-```bash
-./push_swap 3 2 5 1 4
-```
-
-The output will be a list of operations that, when executed, will sort the stack.
-
-### Cleaning
-
-- Remove object files:
-
-```bash
-make clean
-```
-
-- Remove object files and executable:
-
-```bash
-make fclean
-```
-
-- Recompile everything:
-
-```bash
-make re
-```
+- **42 Norm compliant**
 
 ---
 
-## Implementation Details
+## 🧩 Allowed operations
 
-- Input validation ensures:
-  - Only integers are accepted
-  - No duplicate values
-  - Values fit in a 32-bit signed integer
-- Values are normalized (indexed) to handle negative numbers and simplify bitwise operations.
-- Sorting strategies:
-  - 2–3 elements: direct comparison
-  - 4–5 elements: optimized small sort
-  - More than 5 elements: binary radix sort using bitwise operations
+`sa` `sb` `ss` `pa` `pb` `ra` `rb` `rr` `rra` `rrb` `rrr`
+![Workflow](https://cdn.discordapp.com/attachments/1425847662237712439/1476170267679129642/push_swap_visualizer.gif?ex=69a02631&is=699ed4b1&hm=020700bcbca642755c0d4d2c9a0da0e539b2d0a05caa6c972270863ff9f1f371&)
 
 ---
 
-## Resources
+## 🛠️ Build
 
-### Technical References
+```bash
+make        # build push_swap
+make clean  # remove object files
+make fclean # remove objects + binary
+make re     # rebuild everything
+```
 
-- Binary representation and bitwise operations in C  
-   https://github.com/LeoFu9487/push_swap_tester?source=post_page-----fa746e6aba1e---------------------------------------
-
-- Radix Sort explanation  
-   https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
-
-### Use of AI
-
-AI tools (ChatGPT) were used as learning support to:
-
-- Understand radix sort and bitwise algorithms
-- Explain algorithmic complexity and optimization strategies
-
-All code was written, structured, and debugged manually by the author.
+Flags: `-Wall -Wextra -Werror`
 
 ---
+
+## 🚀 Usage
+
+```bash
+./push_swap [n1 n2 n3 ...]
+./push_swap "n1 n2 n3 ..."
+```
+---
+This project was completed as part of the 42 curriculum.
